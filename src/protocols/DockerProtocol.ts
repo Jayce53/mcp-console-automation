@@ -56,15 +56,32 @@ interface DockerAPI {
   ping(callback?: (err: any, data: any) => void): Promise<any>;
 }
 
-// Dynamic Docker import with fallback
-let Docker: (new (options?: any) => DockerAPI) | null = null;
-try {
-  Docker = require('dockerode');
-} catch (error) {
-  // dockerode is optional dependency
-  console.warn(
-    'Docker support requires dockerode package. Install with: npm install dockerode'
-  );
+type DockerConstructor = new (options?: any) => DockerAPI;
+
+// Docker is optional. Load it lazily so generic server startup does not depend
+// on dockerode or emit warnings before Docker functionality is actually used.
+let cachedDockerConstructor: DockerConstructor | null = null;
+let dockerImportAttempted = false;
+
+async function loadDockerConstructor(): Promise<DockerConstructor | null> {
+  if (cachedDockerConstructor) {
+    return cachedDockerConstructor;
+  }
+
+  if (dockerImportAttempted) {
+    return null;
+  }
+
+  dockerImportAttempted = true;
+
+  try {
+    const dockerModule = await import('dockerode');
+    cachedDockerConstructor = (dockerModule.default ??
+      dockerModule) as DockerConstructor;
+    return cachedDockerConstructor;
+  } catch {
+    return null;
+  }
 }
 
 export interface DockerProtocolEvents {
@@ -114,6 +131,7 @@ export class DockerProtocol extends BaseProtocol {
   public readonly capabilities: ProtocolCapabilities;
 
   private docker: DockerAPI | null = null;
+  private dockerConstructor: DockerConstructor | null = null;
   private config: DockerProtocolConfig;
   private dockerSessions: Map<string, DockerSession> = new Map();
   private containers: Map<string, DockerContainer> = new Map();
@@ -168,8 +186,8 @@ export class DockerProtocol extends BaseProtocol {
   async initialize(): Promise<void> {
     if (this.isInitialized) return;
 
-    // Check if Docker is available
-    this.dockerAvailable = Docker !== null;
+    this.dockerConstructor = await loadDockerConstructor();
+    this.dockerAvailable = this.dockerConstructor !== null;
 
     if (!this.dockerAvailable) {
       this.logger.warn(
@@ -202,7 +220,7 @@ export class DockerProtocol extends BaseProtocol {
    * Initialize Docker connection with fallback strategies for different environments
    */
   private initializeDockerConnection(): void {
-    if (!Docker || !this.dockerAvailable) {
+    if (!this.dockerConstructor || !this.dockerAvailable) {
       throw new Error('Docker (dockerode) is not available');
     }
 
@@ -228,7 +246,7 @@ export class DockerProtocol extends BaseProtocol {
         }
       }
 
-      this.docker = new Docker(connectionOptions);
+      this.docker = new this.dockerConstructor(connectionOptions);
       this.connectionHealthy = true;
       this.reconnectAttempts = 0;
 
@@ -281,9 +299,9 @@ export class DockerProtocol extends BaseProtocol {
    * Test connection synchronously for initialization
    */
   private testConnection(options: any): boolean {
-    if (!Docker) return false;
+    if (!this.dockerConstructor) return false;
     try {
-      const testDocker = new Docker(options);
+      const testDocker = new this.dockerConstructor(options);
       // This is a synchronous test - in practice, you'd want to make this async
       return true;
     } catch {

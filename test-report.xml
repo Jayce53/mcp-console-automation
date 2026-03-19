@@ -1,49 +1,997 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
-  <file path="C:\Users\cheat\source\repos\mcp-console-automation\tests\integration\protocols\wsl.test.ts">
-    <testCase name="WSL Protocol Integration Tests WSL Service Management should initialize WSL service successfully" duration="0"/>
-    <testCase name="WSL Protocol Integration Tests WSL Service Management should list available distributions" duration="0"/>
-    <testCase name="WSL Protocol Integration Tests WSL Service Management should get default distribution" duration="0"/>
-    <testCase name="WSL Protocol Integration Tests WSL Service Management should set default distribution" duration="0"/>
-    <testCase name="WSL Protocol Integration Tests WSL Service Management should handle WSL service unavailability" duration="0"/>
-    <testCase name="WSL Protocol Integration Tests Session Management should create WSL session successfully" duration="0"/>
-    <testCase name="WSL Protocol Integration Tests Session Management should create session with default distribution" duration="0"/>
-    <testCase name="WSL Protocol Integration Tests Session Management should create session with specific user" duration="0"/>
-    <testCase name="WSL Protocol Integration Tests Session Management should handle invalid distribution" duration="0"/>
-    <testCase name="WSL Protocol Integration Tests Session Management should handle invalid user" duration="0"/>
-    <testCase name="WSL Protocol Integration Tests Command Execution should execute simple commands successfully" duration="0"/>
-    <testCase name="WSL Protocol Integration Tests Command Execution should execute Linux-specific commands" duration="0"/>
-    <testCase name="WSL Protocol Integration Tests Command Execution should handle file system operations" duration="0"/>
-    <testCase name="WSL Protocol Integration Tests Command Execution should handle Windows interoperability" duration="0"/>
-    <testCase name="WSL Protocol Integration Tests Command Execution should handle file path conversions" duration="0"/>
-    <testCase name="WSL Protocol Integration Tests Command Execution should handle command timeouts" duration="0"/>
-    <testCase name="WSL Protocol Integration Tests Command Execution should handle restricted commands" duration="0"/>
-    <testCase name="WSL Protocol Integration Tests Command Execution should capture command output with streaming" duration="0"/>
-    <testCase name="WSL Protocol Integration Tests System Information and Monitoring should collect WSL system information" duration="0"/>
-    <testCase name="WSL Protocol Integration Tests System Information and Monitoring should monitor resource usage" duration="0"/>
-    <testCase name="WSL Protocol Integration Tests System Information and Monitoring should perform health checks" duration="0"/>
-    <testCase name="WSL Protocol Integration Tests System Information and Monitoring should track file system usage" duration="0"/>
-    <testCase name="WSL Protocol Integration Tests Network Configuration should configure port forwarding" duration="0"/>
-    <testCase name="WSL Protocol Integration Tests Network Configuration should handle network connectivity" duration="0"/>
-    <testCase name="WSL Protocol Integration Tests Network Configuration should configure DNS settings" duration="0"/>
-    <testCase name="WSL Protocol Integration Tests File System Operations should handle Windows-Linux file path conversion" duration="0"/>
-    <testCase name="WSL Protocol Integration Tests File System Operations should handle file permissions correctly" duration="0"/>
-    <testCase name="WSL Protocol Integration Tests File System Operations should handle symbolic links" duration="0"/>
-    <testCase name="WSL Protocol Integration Tests File System Operations should handle case sensitivity correctly" duration="0"/>
-    <testCase name="WSL Protocol Integration Tests Distribution Management should start and stop distributions" duration="0"/>
-    <testCase name="WSL Protocol Integration Tests Distribution Management should restart distribution" duration="0"/>
-    <testCase name="WSL Protocol Integration Tests Distribution Management should get distribution configuration" duration="0"/>
-    <testCase name="WSL Protocol Integration Tests Distribution Management should update distribution configuration" duration="0"/>
-    <testCase name="WSL Protocol Integration Tests Security and Access Control should enforce user restrictions" duration="0"/>
-    <testCase name="WSL Protocol Integration Tests Security and Access Control should block restricted commands" duration="0"/>
-    <testCase name="WSL Protocol Integration Tests Security and Access Control should audit command execution" duration="0"/>
-    <testCase name="WSL Protocol Integration Tests Security and Access Control should enforce root access restrictions" duration="0"/>
-    <testCase name="WSL Protocol Integration Tests Error Handling and Resilience should handle WSL service restart" duration="0"/>
-    <testCase name="WSL Protocol Integration Tests Error Handling and Resilience should handle distribution unavailability" duration="0"/>
-    <testCase name="WSL Protocol Integration Tests Error Handling and Resilience should handle resource exhaustion" duration="0"/>
-    <testCase name="WSL Protocol Integration Tests Error Handling and Resilience should handle concurrent operations" duration="0"/>
-    <testCase name="WSL Protocol Integration Tests Session Cleanup and Termination should terminate session gracefully" duration="0"/>
-    <testCase name="WSL Protocol Integration Tests Session Cleanup and Termination should force terminate unresponsive sessions" duration="0"/>
-    <testCase name="WSL Protocol Integration Tests Session Cleanup and Termination should cleanup all resources on protocol shutdown" duration="0"/>
+  <file path="G:\projects\mcp-console-automation\src\tests\outputFilterEngine.test.ts">
+    <testCase name="OutputFilterEngine Basic Pattern Matching should filter lines with simple regex pattern" duration="34">
+      <failure message="Error: expect(received).toHaveLength(expected)"><![CDATA[Error: expect(received).toHaveLength(expected)
+
+Expected length: 3
+Received length: 2
+Received array:  [{"data": "This is a test line", "sessionId": "test-session", "timestamp": 2026-03-19T02:39:46.301Z, "type": "stdout"}, {"data": "Final test line", "sessionId": "test-session", "timestamp": 2026-03-19T02:39:49.301Z, "type": "stdout"}]
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\outputFilterEngine.test.ts:66:29)]]></failure>
+    </testCase>
+    <testCase name="OutputFilterEngine Basic Pattern Matching should handle case-insensitive matching" duration="5">
+      <failure message="Error: expect(received).toHaveLength(expected)"><![CDATA[Error: expect(received).toHaveLength(expected)
+
+Expected length: 3
+Received length: 2
+Received array:  [{"data": "ERROR: Something failed", "sessionId": "test-session", "timestamp": 2026-03-19T02:39:46.327Z, "type": "stdout"}, {"data": "Error: Mixed case", "sessionId": "test-session", "timestamp": 2026-03-19T02:39:48.327Z, "type": "stdout"}]
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\outputFilterEngine.test.ts:85:37)]]></failure>
+    </testCase>
+    <testCase name="OutputFilterEngine Basic Pattern Matching should handle complex regex patterns" duration="6"/>
+    <testCase name="OutputFilterEngine Time-based Filtering should filter by absolute timestamp (ISO)" duration="3">
+      <failure message="Error: expect(received).toHaveLength(expected)"><![CDATA[Error: expect(received).toHaveLength(expected)
+
+Expected length: 2
+Received length: 0
+Received array:  []
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\outputFilterEngine.test.ts:124:37)]]></failure>
+    </testCase>
+    <testCase name="OutputFilterEngine Time-based Filtering should filter by relative timestamp" duration="3">
+      <failure message="Error: expect(received).toHaveLength(expected)"><![CDATA[Error: expect(received).toHaveLength(expected)
+
+Expected length: 2
+Received length: 0
+Received array:  []
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\outputFilterEngine.test.ts:139:37)]]></failure>
+    </testCase>
+    <testCase name="OutputFilterEngine Time-based Filtering should handle various relative time formats" duration="2">
+      <failure message="Error: expect(received).toHaveLength(expected)"><![CDATA[Error: expect(received).toHaveLength(expected)
+
+Expected length: 1
+Received length: 0
+Received array:  []
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\outputFilterEngine.test.ts:162:39)]]></failure>
+    </testCase>
+    <testCase name="OutputFilterEngine Line-based Operations should return first N lines (head)" duration="4"/>
+    <testCase name="OutputFilterEngine Line-based Operations should return last N lines (tail)" duration="3"/>
+    <testCase name="OutputFilterEngine Line-based Operations should return specific line range" duration="4"/>
+    <testCase name="OutputFilterEngine Line-based Operations should handle invalid line ranges gracefully" duration="4"/>
+    <testCase name="OutputFilterEngine Multi-pattern Search should handle AND logic with multiple patterns" duration="3">
+      <failure message="Error: expect(received).toHaveLength(expected)"><![CDATA[Error: expect(received).toHaveLength(expected)
+
+Expected length: 3
+Received length: 1
+Received array:  [{"data": "ERROR: Database connection failed", "sessionId": "test-session", "timestamp": 2026-03-19T02:39:46.363Z, "type": "stdout"}]
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\outputFilterEngine.test.ts:247:37)]]></failure>
+    </testCase>
+    <testCase name="OutputFilterEngine Multi-pattern Search should handle OR logic with multiple patterns" duration="7"/>
+    <testCase name="OutputFilterEngine Multi-pattern Search should combine multi-pattern with other filters" duration="5">
+      <failure message="Error: expect(received).toHaveLength(expected)"><![CDATA[Error: expect(received).toHaveLength(expected)
+
+Expected length: 3
+Received length: 2
+Received array:  [{"data": "ERROR: Recent error", "sessionId": "test-session", "timestamp": 2026-03-19T02:39:48.374Z, "type": "stdout"}, {"data": "WARN: Recent warning", "sessionId": "test-session", "timestamp": 2026-03-19T02:39:50.374Z, "type": "stdout"}]
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\outputFilterEngine.test.ts:287:37)]]></failure>
+    </testCase>
+    <testCase name="OutputFilterEngine Performance and Large Data Tests should handle 100k+ lines efficiently" duration="75">
+      <failure message="Error: expect(received).toBe(expected) // Object.is equality"><![CDATA[Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 100
+Received: 1
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\outputFilterEngine.test.ts:306:44)]]></failure>
+    </testCase>
+    <testCase name="OutputFilterEngine Performance and Large Data Tests should use streaming mode for large outputs" duration="132">
+      <failure message="Error: expect(received).toBe(expected) // Object.is equality"><![CDATA[Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 300
+Received: 1
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\outputFilterEngine.test.ts:322:44)]]></failure>
+    </testCase>
+    <testCase name="OutputFilterEngine Performance and Large Data Tests should respect maxLines limit for performance" duration="157">
+      <failure message="Error: expect(received).toBe(expected) // Object.is equality"><![CDATA[Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 50000
+Received: 200000
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\outputFilterEngine.test.ts:335:41)]]></failure>
+    </testCase>
+    <testCase name="OutputFilterEngine Performance and Large Data Tests should maintain performance with complex regex patterns" duration="71"/>
+    <testCase name="OutputFilterEngine Performance and Large Data Tests should handle memory efficiently with streaming" duration="216"/>
+    <testCase name="OutputFilterEngine Combined Filter Operations should apply multiple filters in correct order" duration="2">
+      <failure message="Error: expect(received).toHaveLength(expected)"><![CDATA[Error: expect(received).toHaveLength(expected)
+
+Expected length: 2
+Received length: 1
+Received array:  [{"data": "ERROR: Latest error", "sessionId": "test-session", "timestamp": 2026-03-19T02:39:43.029Z, "type": "stdout"}]
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\outputFilterEngine.test.ts:402:37)]]></failure>
+    </testCase>
+    <testCase name="OutputFilterEngine Combined Filter Operations should handle edge cases with empty results" duration="2"/>
+    <testCase name="OutputFilterEngine Combined Filter Operations should validate filter options" duration="19">
+      <failure message="Error: Filter operation failed: Invalid regular expression: /[invalid regex(/g: Unterminated character class"><![CDATA[Error: Filter operation failed: Invalid regular expression: /[invalid regex(/g: Unterminated character class
+    at OutputFilterEngine.filter (G:\projects\mcp-console-automation\src\core\OutputFilterEngine.ts:225:13)
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\outputFilterEngine.test.ts:428:53)
+    at Promise.then.completed (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (<anonymous>)
+    at callAsyncCircusFn (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusTest (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:316:40)
+    at _runTest (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:252:3)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at run (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:444:34)]]></failure>
+    </testCase>
+    <testCase name="OutputFilterEngine Caching and Optimization should cache regex patterns for performance" duration="11"/>
+    <testCase name="OutputFilterEngine Caching and Optimization should cache timestamp parsing for performance" duration="12"/>
+    <testCase name="OutputFilterEngine Real-world Scenarios should filter application logs effectively" duration="3"/>
+    <testCase name="OutputFilterEngine Real-world Scenarios should handle build output filtering" duration="2"/>
+    <testCase name="OutputFilterEngine Real-world Scenarios should filter server access logs" duration="5">
+      <failure message="Error: expect(received).toHaveLength(expected)"><![CDATA[Error: expect(received).toHaveLength(expected)
+
+Expected length: 2
+Received length: 1
+Received array:  [{"data": "10.0.0.1 - - [25/Dec/2023:10:30:02 +0000] \"POST /api/login HTTP/1.1\" 401 89", "sessionId": "test-session", "timestamp": 2026-03-19T02:39:49.084Z, "type": "stdout"}]
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\outputFilterEngine.test.ts:552:37)]]></failure>
+    </testCase>
+  </file>
+  <file path="G:\projects\mcp-console-automation\src\tests\TestReplayEngine.test.ts">
+    <testCase name="TestReplayEngine replay should replay a simple recording" duration="124"/>
+    <testCase name="TestReplayEngine replay should handle recording with wait_for_output" duration="114">
+      <failure message="Error: expect(jest.fn()).toHaveBeenCalledWith(...expected)"><![CDATA[Error: expect(jest.fn()).toHaveBeenCalledWith(...expected)
+
+- Expected
++ Received
+
+  Object {
+-   "pattern": "prompt>",
+    "sessionId": "test-session-123",
+-   "timeout": 5000,
++   "success": true,
+  },
++ "prompt>",
++ {"timeout": 5000},
+
+Number of calls: 1
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\TestReplayEngine.test.ts:110:48)]]></failure>
+    </testCase>
+    <testCase name="TestReplayEngine replay should skip assertion and snapshot steps (Phase 2)" duration="71">
+      <failure message="Error: expect(received).toBe(expected) // Object.is equality"><![CDATA[Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: "success"
+Received: "failure"
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\TestReplayEngine.test.ts:140:29)]]></failure>
+    </testCase>
+    <testCase name="TestReplayEngine replay should handle errors in steps" duration="29"/>
+    <testCase name="TestReplayEngine replay should stop on error if stopOnError is true" duration="25"/>
+    <testCase name="TestReplayEngine replay should continue on error if stopOnError is false" duration="35"/>
+    <testCase name="TestReplayEngine replay should respect timeout option" duration="230">
+      <failure message="Error: expect(received).toBe(expected) // Object.is equality"><![CDATA[Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: "error"
+Received: "success"
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\TestReplayEngine.test.ts:249:29)]]></failure>
+    </testCase>
+    <testCase name="TestReplayEngine replay should validate output if validateOutput is true" duration="18"/>
+    <testCase name="TestReplayEngine replay should cleanup sessions after replay" duration="31"/>
+    <testCase name="TestReplayEngine replayByName should load and replay recording by name" duration="19"/>
+    <testCase name="TestReplayEngine replayByName should throw error if recording not found" duration="11"/>
+    <testCase name="TestReplayEngine Speed control should replay at normal speed (1x)" duration="115"/>
+    <testCase name="TestReplayEngine Speed control should replay at 2x speed" duration="55"/>
+    <testCase name="TestReplayEngine Speed control should fast-forward when speed is 0" duration="5"/>
+    <testCase name="TestReplayEngine Static methods getReplayStats should calculate replay statistics" duration="4"/>
+    <testCase name="TestReplayEngine Static methods formatResult should format result as human-readable string" duration="4"/>
+    <testCase name="TestReplayEngine Static methods formatResult should include error message if present" duration="9"/>
+  </file>
+  <file path="G:\projects\mcp-console-automation\src\tests\RetryManager.test.ts">
+    <testCase name="RetryManager Basic Retry Logic should retry failed tests up to maxRetries" duration="52"/>
+    <testCase name="RetryManager Basic Retry Logic should stop retrying after success" duration="1"/>
+    <testCase name="RetryManager Exponential Backoff should apply exponential backoff between retries" duration="729"/>
+    <testCase name="RetryManager Selective Retry should only retry on specific error types" duration="1"/>
+    <testCase name="RetryManager Selective Retry should retry on timeout if configured" duration="47"/>
+    <testCase name="RetryManager Retry Statistics should generate statistics for retry results" duration="1">
+      <failure message="Error: expect(received).toBe(expected) // Object.is equality"><![CDATA[Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 2
+Received: 0
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\RetryManager.test.ts:252:39)]]></failure>
+    </testCase>
+    <testCase name="CircuitBreaker should open circuit after threshold failures" duration="1"/>
+    <testCase name="CircuitBreaker should close circuit after successful execution" duration="1"/>
+  </file>
+  <file path="G:\projects\mcp-console-automation\src\tests\ParallelExecutor.test.ts">
+    <testCase name="ParallelExecutor Parallel Execution should execute tests in parallel" duration="74">
+      <failure message="Error: expect(received).toBeGreaterThan(expected)"><![CDATA[Error: expect(received).toBeGreaterThan(expected)
+
+Expected: > 1
+Received:   NaN
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\ParallelExecutor.test.ts:39:30)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)]]></failure>
+    </testCase>
+    <testCase name="ParallelExecutor Parallel Execution should demonstrate speedup over sequential execution" duration="72">
+      <failure message="Error: expect(received).toBeLessThan(expected)"><![CDATA[Error: expect(received).toBeLessThan(expected)
+
+Expected: < 0
+Received:   70
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\ParallelExecutor.test.ts:69:32)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)]]></failure>
+    </testCase>
+    <testCase name="ParallelExecutor Fail-Fast Mode should stop on first failure in fail-fast mode" duration="52"/>
+    <testCase name="ParallelExecutor Test Isolation should isolate tests in separate workers" duration="64">
+      <failure message="Error: expect(received).toBeDefined()"><![CDATA[Error: expect(received).toBeDefined()
+
+Received: undefined
+    at G:\projects\mcp-console-automation\src\tests\ParallelExecutor.test.ts:121:24
+    at Array.forEach (<anonymous>)
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\ParallelExecutor.test.ts:120:22)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)]]></failure>
+    </testCase>
+    <testCase name="ParallelExecutor Empty Test Array should handle empty test array" duration="1"/>
+    <testCase name="ParallelExecutor Skipped Tests should skip tests marked as skip" duration="72"/>
+    <testCase name="ParallelExecutor Worker Pool Statistics should provide worker pool statistics" duration="59"/>
+    <testCase name="ParallelExecutor Execution Metrics should collect execution metrics" duration="67"/>
+  </file>
+  <file path="G:\projects\mcp-console-automation\src\tests\SnapshotManager.test.ts">
+    <testCase name="SnapshotManager capture should capture snapshot with all data" duration="6"/>
+    <testCase name="SnapshotManager capture should generate hash for integrity" duration="4"/>
+    <testCase name="SnapshotManager save and load should save snapshot to disk" duration="20"/>
+    <testCase name="SnapshotManager save and load should load snapshot from disk" duration="22"/>
+    <testCase name="SnapshotManager save and load should verify hash on load" duration="59"/>
+    <testCase name="SnapshotManager save and load should save with pretty formatting" duration="13"/>
+    <testCase name="SnapshotManager save and load should save without pretty formatting" duration="13"/>
+    <testCase name="SnapshotManager loadBySessionId should load most recent snapshot by session ID" duration="36"/>
+    <testCase name="SnapshotManager loadBySessionId should load snapshot by session ID and timestamp" duration="30"/>
+    <testCase name="SnapshotManager loadBySessionId should throw if session not found" duration="4"/>
+    <testCase name="SnapshotManager listSnapshots should list all snapshots" duration="7"/>
+    <testCase name="SnapshotManager listSnapshots should filter by session ID" duration="20">
+      <failure message="Error: expect(received).toBe(expected) // Object.is equality"><![CDATA[Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 2
+Received: 1
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\SnapshotManager.test.ts:165:32)]]></failure>
+    </testCase>
+    <testCase name="SnapshotManager listSnapshots should return empty array when no snapshots exist" duration="2"/>
+    <testCase name="SnapshotManager delete operations should delete a snapshot" duration="4"/>
+    <testCase name="SnapshotManager delete operations should delete all snapshots for a session" duration="19">
+      <failure message="Error: expect(received).toBe(expected) // Object.is equality"><![CDATA[Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 2
+Received: 1
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\SnapshotManager.test.ts:192:21)]]></failure>
+    </testCase>
+    <testCase name="SnapshotManager delete operations should delete all snapshots" duration="6"/>
+    <testCase name="SnapshotManager getStats should return statistics" duration="15"/>
+    <testCase name="SnapshotManager getStats should return zero stats when no snapshots" duration="2"/>
+    <testCase name="SnapshotManager cleanup should keep only N most recent snapshots per session" duration="105"/>
+    <testCase name="SnapshotManager cleanup should handle multiple sessions independently" duration="93"/>
+    <testCase name="SnapshotManager export should export as JSON" duration="2"/>
+    <testCase name="SnapshotManager export should export as YAML" duration="2"/>
+    <testCase name="SnapshotManager export should export as text" duration="3"/>
+    <testCase name="SnapshotManager export should throw for unsupported format" duration="2"/>
+  </file>
+  <file path="G:\projects\mcp-console-automation\src\tests\CodeGenerator.test.ts">
+    <testCase name="CodeGenerator generateCode should generate JavaScript code" duration="1">
+      <failure message="Error: EPERM: operation not permitted, unlink &apos;G:\projects\mcp-console-automation\data\generated-tests\deep&apos;"><![CDATA[Error: EPERM: operation not permitted, unlink 'G:\projects\mcp-console-automation\data\generated-tests\deep'
+    at Object.unlinkSync (node:fs:1952:11)
+    at G:\projects\mcp-console-automation\src\tests\CodeGenerator.test.ts:31:12
+    at Array.forEach (<anonymous>)
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\CodeGenerator.test.ts:30:13)
+    at Promise.then.completed (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (<anonymous>)
+    at callAsyncCircusFn (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusHook (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:281:40)
+    at _runTest (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:246:5)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at run (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:444:34)]]></failure>
+    </testCase>
+    <testCase name="CodeGenerator generateCode should generate TypeScript code" duration="0">
+      <failure message="Error: EPERM: operation not permitted, unlink &apos;G:\projects\mcp-console-automation\data\generated-tests\deep&apos;"><![CDATA[Error: EPERM: operation not permitted, unlink 'G:\projects\mcp-console-automation\data\generated-tests\deep'
+    at Object.unlinkSync (node:fs:1952:11)
+    at G:\projects\mcp-console-automation\src\tests\CodeGenerator.test.ts:31:12
+    at Array.forEach (<anonymous>)
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\CodeGenerator.test.ts:30:13)
+    at Promise.then.completed (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (<anonymous>)
+    at callAsyncCircusFn (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusHook (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:281:40)
+    at _runTest (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:246:5)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at run (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:444:34)]]></failure>
+    </testCase>
+    <testCase name="CodeGenerator generateCode should generate Python code" duration="0">
+      <failure message="Error: EPERM: operation not permitted, unlink &apos;G:\projects\mcp-console-automation\data\generated-tests\deep&apos;"><![CDATA[Error: EPERM: operation not permitted, unlink 'G:\projects\mcp-console-automation\data\generated-tests\deep'
+    at Object.unlinkSync (node:fs:1952:11)
+    at G:\projects\mcp-console-automation\src\tests\CodeGenerator.test.ts:31:12
+    at Array.forEach (<anonymous>)
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\CodeGenerator.test.ts:30:13)
+    at Promise.then.completed (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (<anonymous>)
+    at callAsyncCircusFn (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusHook (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:281:40)
+    at _runTest (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:246:5)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at run (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:444:34)]]></failure>
+    </testCase>
+    <testCase name="CodeGenerator generateCode should support mocha framework" duration="4">
+      <failure message="Error: EPERM: operation not permitted, unlink &apos;G:\projects\mcp-console-automation\data\generated-tests\deep&apos;"><![CDATA[Error: EPERM: operation not permitted, unlink 'G:\projects\mcp-console-automation\data\generated-tests\deep'
+    at Object.unlinkSync (node:fs:1952:11)
+    at G:\projects\mcp-console-automation\src\tests\CodeGenerator.test.ts:31:12
+    at Array.forEach (<anonymous>)
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\CodeGenerator.test.ts:30:13)
+    at Promise.then.completed (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (<anonymous>)
+    at callAsyncCircusFn (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusHook (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:281:40)
+    at _runTest (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:246:5)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at run (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:444:34)]]></failure>
+    </testCase>
+    <testCase name="CodeGenerator generateCode should include setup code when includeSetup is true" duration="1">
+      <failure message="Error: EPERM: operation not permitted, unlink &apos;G:\projects\mcp-console-automation\data\generated-tests\deep&apos;"><![CDATA[Error: EPERM: operation not permitted, unlink 'G:\projects\mcp-console-automation\data\generated-tests\deep'
+    at Object.unlinkSync (node:fs:1952:11)
+    at G:\projects\mcp-console-automation\src\tests\CodeGenerator.test.ts:31:12
+    at Array.forEach (<anonymous>)
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\CodeGenerator.test.ts:30:13)
+    at Promise.then.completed (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (<anonymous>)
+    at callAsyncCircusFn (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusHook (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:281:40)
+    at _runTest (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:246:5)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at run (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:444:34)]]></failure>
+    </testCase>
+    <testCase name="CodeGenerator generateCode should exclude setup code when includeSetup is false" duration="1">
+      <failure message="Error: EPERM: operation not permitted, unlink &apos;G:\projects\mcp-console-automation\data\generated-tests\deep&apos;"><![CDATA[Error: EPERM: operation not permitted, unlink 'G:\projects\mcp-console-automation\data\generated-tests\deep'
+    at Object.unlinkSync (node:fs:1952:11)
+    at G:\projects\mcp-console-automation\src\tests\CodeGenerator.test.ts:31:12
+    at Array.forEach (<anonymous>)
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\CodeGenerator.test.ts:30:13)
+    at Promise.then.completed (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (<anonymous>)
+    at callAsyncCircusFn (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusHook (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:281:40)
+    at _runTest (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:246:5)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at run (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:444:34)]]></failure>
+    </testCase>
+    <testCase name="CodeGenerator generateCode should include teardown code when includeTeardown is true" duration="1">
+      <failure message="Error: EPERM: operation not permitted, unlink &apos;G:\projects\mcp-console-automation\data\generated-tests\deep&apos;"><![CDATA[Error: EPERM: operation not permitted, unlink 'G:\projects\mcp-console-automation\data\generated-tests\deep'
+    at Object.unlinkSync (node:fs:1952:11)
+    at G:\projects\mcp-console-automation\src\tests\CodeGenerator.test.ts:31:12
+    at Array.forEach (<anonymous>)
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\CodeGenerator.test.ts:30:13)
+    at Promise.then.completed (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (<anonymous>)
+    at callAsyncCircusFn (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusHook (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:281:40)
+    at _runTest (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:246:5)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at run (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:444:34)]]></failure>
+    </testCase>
+    <testCase name="CodeGenerator generateCode should handle special characters in test names" duration="1">
+      <failure message="Error: EPERM: operation not permitted, unlink &apos;G:\projects\mcp-console-automation\data\generated-tests\deep&apos;"><![CDATA[Error: EPERM: operation not permitted, unlink 'G:\projects\mcp-console-automation\data\generated-tests\deep'
+    at Object.unlinkSync (node:fs:1952:11)
+    at G:\projects\mcp-console-automation\src\tests\CodeGenerator.test.ts:31:12
+    at Array.forEach (<anonymous>)
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\CodeGenerator.test.ts:30:13)
+    at Promise.then.completed (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (<anonymous>)
+    at callAsyncCircusFn (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusHook (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:281:40)
+    at _runTest (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:246:5)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at run (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:444:34)]]></failure>
+    </testCase>
+    <testCase name="CodeGenerator generateCode should escape strings in generated code" duration="1">
+      <failure message="Error: EPERM: operation not permitted, unlink &apos;G:\projects\mcp-console-automation\data\generated-tests\deep&apos;"><![CDATA[Error: EPERM: operation not permitted, unlink 'G:\projects\mcp-console-automation\data\generated-tests\deep'
+    at Object.unlinkSync (node:fs:1952:11)
+    at G:\projects\mcp-console-automation\src\tests\CodeGenerator.test.ts:31:12
+    at Array.forEach (<anonymous>)
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\CodeGenerator.test.ts:30:13)
+    at Promise.then.completed (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (<anonymous>)
+    at callAsyncCircusFn (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusHook (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:281:40)
+    at _runTest (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:246:5)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at run (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:444:34)]]></failure>
+    </testCase>
+    <testCase name="CodeGenerator generateCodeFromFile should load recording from file and generate code" duration="1">
+      <failure message="Error: EPERM: operation not permitted, unlink &apos;G:\projects\mcp-console-automation\data\generated-tests\deep&apos;"><![CDATA[Error: EPERM: operation not permitted, unlink 'G:\projects\mcp-console-automation\data\generated-tests\deep'
+    at Object.unlinkSync (node:fs:1952:11)
+    at G:\projects\mcp-console-automation\src\tests\CodeGenerator.test.ts:31:12
+    at Array.forEach (<anonymous>)
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\CodeGenerator.test.ts:30:13)
+    at Promise.then.completed (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (<anonymous>)
+    at callAsyncCircusFn (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusHook (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:281:40)
+    at _runTest (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:246:5)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at run (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:444:34)]]></failure>
+    </testCase>
+    <testCase name="CodeGenerator generateCodeFromFile should throw error if recording file not found" duration="1">
+      <failure message="Error: EPERM: operation not permitted, unlink &apos;G:\projects\mcp-console-automation\data\generated-tests\deep&apos;"><![CDATA[Error: EPERM: operation not permitted, unlink 'G:\projects\mcp-console-automation\data\generated-tests\deep'
+    at Object.unlinkSync (node:fs:1952:11)
+    at G:\projects\mcp-console-automation\src\tests\CodeGenerator.test.ts:31:12
+    at Array.forEach (<anonymous>)
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\CodeGenerator.test.ts:30:13)
+    at Promise.then.completed (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (<anonymous>)
+    at callAsyncCircusFn (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusHook (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:281:40)
+    at _runTest (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:246:5)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at run (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:444:34)]]></failure>
+    </testCase>
+    <testCase name="CodeGenerator generateAndSaveCode should generate code and save to file" duration="1">
+      <failure message="Error: EPERM: operation not permitted, unlink &apos;G:\projects\mcp-console-automation\data\generated-tests\deep&apos;"><![CDATA[Error: EPERM: operation not permitted, unlink 'G:\projects\mcp-console-automation\data\generated-tests\deep'
+    at Object.unlinkSync (node:fs:1952:11)
+    at G:\projects\mcp-console-automation\src\tests\CodeGenerator.test.ts:31:12
+    at Array.forEach (<anonymous>)
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\CodeGenerator.test.ts:30:13)
+    at Promise.then.completed (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (<anonymous>)
+    at callAsyncCircusFn (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusHook (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:281:40)
+    at _runTest (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:246:5)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at run (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:444:34)]]></failure>
+    </testCase>
+    <testCase name="CodeGenerator generateAndSaveCode should create output directory if it does not exist" duration="1">
+      <failure message="Error: EPERM: operation not permitted, unlink &apos;G:\projects\mcp-console-automation\data\generated-tests\deep&apos;"><![CDATA[Error: EPERM: operation not permitted, unlink 'G:\projects\mcp-console-automation\data\generated-tests\deep'
+    at Object.unlinkSync (node:fs:1952:11)
+    at G:\projects\mcp-console-automation\src\tests\CodeGenerator.test.ts:31:12
+    at Array.forEach (<anonymous>)
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\CodeGenerator.test.ts:30:13)
+    at Promise.then.completed (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (<anonymous>)
+    at callAsyncCircusFn (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusHook (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:281:40)
+    at _runTest (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:246:5)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at run (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:444:34)]]></failure>
+    </testCase>
+    <testCase name="CodeGenerator Code generation for different step types should generate code for create_session step" duration="1">
+      <failure message="Error: EPERM: operation not permitted, unlink &apos;G:\projects\mcp-console-automation\data\generated-tests\deep&apos;"><![CDATA[Error: EPERM: operation not permitted, unlink 'G:\projects\mcp-console-automation\data\generated-tests\deep'
+    at Object.unlinkSync (node:fs:1952:11)
+    at G:\projects\mcp-console-automation\src\tests\CodeGenerator.test.ts:31:12
+    at Array.forEach (<anonymous>)
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\CodeGenerator.test.ts:30:13)
+    at Promise.then.completed (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (<anonymous>)
+    at callAsyncCircusFn (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusHook (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:281:40)
+    at _runTest (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:246:5)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at run (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:444:34)]]></failure>
+    </testCase>
+    <testCase name="CodeGenerator Code generation for different step types should generate code for send_input step" duration="1">
+      <failure message="Error: EPERM: operation not permitted, unlink &apos;G:\projects\mcp-console-automation\data\generated-tests\deep&apos;"><![CDATA[Error: EPERM: operation not permitted, unlink 'G:\projects\mcp-console-automation\data\generated-tests\deep'
+    at Object.unlinkSync (node:fs:1952:11)
+    at G:\projects\mcp-console-automation\src\tests\CodeGenerator.test.ts:31:12
+    at Array.forEach (<anonymous>)
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\CodeGenerator.test.ts:30:13)
+    at Promise.then.completed (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (<anonymous>)
+    at callAsyncCircusFn (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusHook (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:281:40)
+    at _runTest (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:246:5)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at run (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:444:34)]]></failure>
+    </testCase>
+    <testCase name="CodeGenerator Code generation for different step types should generate code for send_key step" duration="1">
+      <failure message="Error: EPERM: operation not permitted, unlink &apos;G:\projects\mcp-console-automation\data\generated-tests\deep&apos;"><![CDATA[Error: EPERM: operation not permitted, unlink 'G:\projects\mcp-console-automation\data\generated-tests\deep'
+    at Object.unlinkSync (node:fs:1952:11)
+    at G:\projects\mcp-console-automation\src\tests\CodeGenerator.test.ts:31:12
+    at Array.forEach (<anonymous>)
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\CodeGenerator.test.ts:30:13)
+    at Promise.then.completed (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (<anonymous>)
+    at callAsyncCircusFn (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusHook (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:281:40)
+    at _runTest (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:246:5)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at run (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:444:34)]]></failure>
+    </testCase>
+    <testCase name="CodeGenerator Code generation for different step types should generate code for wait_for_output step" duration="1">
+      <failure message="Error: EPERM: operation not permitted, unlink &apos;G:\projects\mcp-console-automation\data\generated-tests\deep&apos;"><![CDATA[Error: EPERM: operation not permitted, unlink 'G:\projects\mcp-console-automation\data\generated-tests\deep'
+    at Object.unlinkSync (node:fs:1952:11)
+    at G:\projects\mcp-console-automation\src\tests\CodeGenerator.test.ts:31:12
+    at Array.forEach (<anonymous>)
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\CodeGenerator.test.ts:30:13)
+    at Promise.then.completed (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (<anonymous>)
+    at callAsyncCircusFn (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusHook (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:281:40)
+    at _runTest (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:246:5)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at run (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:444:34)]]></failure>
+    </testCase>
+    <testCase name="CodeGenerator Code generation for different step types should add comment for unimplemented step types" duration="1">
+      <failure message="Error: EPERM: operation not permitted, unlink &apos;G:\projects\mcp-console-automation\data\generated-tests\deep&apos;"><![CDATA[Error: EPERM: operation not permitted, unlink 'G:\projects\mcp-console-automation\data\generated-tests\deep'
+    at Object.unlinkSync (node:fs:1952:11)
+    at G:\projects\mcp-console-automation\src\tests\CodeGenerator.test.ts:31:12
+    at Array.forEach (<anonymous>)
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\CodeGenerator.test.ts:30:13)
+    at Promise.then.completed (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (<anonymous>)
+    at callAsyncCircusFn (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusHook (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:281:40)
+    at _runTest (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:246:5)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at run (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:444:34)]]></failure>
+    </testCase>
+    <testCase name="CodeGenerator Template loading should throw error if template not found" duration="0">
+      <failure message="Error: EPERM: operation not permitted, unlink &apos;G:\projects\mcp-console-automation\data\generated-tests\deep&apos;"><![CDATA[Error: EPERM: operation not permitted, unlink 'G:\projects\mcp-console-automation\data\generated-tests\deep'
+    at Object.unlinkSync (node:fs:1952:11)
+    at G:\projects\mcp-console-automation\src\tests\CodeGenerator.test.ts:31:12
+    at Array.forEach (<anonymous>)
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\CodeGenerator.test.ts:30:13)
+    at Promise.then.completed (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (<anonymous>)
+    at callAsyncCircusFn (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusHook (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:281:40)
+    at _runTest (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:246:5)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at run (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:444:34)]]></failure>
+    </testCase>
+    <testCase name="CodeGenerator Edge cases should handle empty recordings" duration="1">
+      <failure message="Error: EPERM: operation not permitted, unlink &apos;G:\projects\mcp-console-automation\data\generated-tests\deep&apos;"><![CDATA[Error: EPERM: operation not permitted, unlink 'G:\projects\mcp-console-automation\data\generated-tests\deep'
+    at Object.unlinkSync (node:fs:1952:11)
+    at G:\projects\mcp-console-automation\src\tests\CodeGenerator.test.ts:31:12
+    at Array.forEach (<anonymous>)
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\CodeGenerator.test.ts:30:13)
+    at Promise.then.completed (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (<anonymous>)
+    at callAsyncCircusFn (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusHook (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:281:40)
+    at _runTest (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:246:5)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at run (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:444:34)]]></failure>
+    </testCase>
+    <testCase name="CodeGenerator Edge cases should handle recordings with only metadata" duration="1">
+      <failure message="Error: EPERM: operation not permitted, unlink &apos;G:\projects\mcp-console-automation\data\generated-tests\deep&apos;"><![CDATA[Error: EPERM: operation not permitted, unlink 'G:\projects\mcp-console-automation\data\generated-tests\deep'
+    at Object.unlinkSync (node:fs:1952:11)
+    at G:\projects\mcp-console-automation\src\tests\CodeGenerator.test.ts:31:12
+    at Array.forEach (<anonymous>)
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\CodeGenerator.test.ts:30:13)
+    at Promise.then.completed (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (<anonymous>)
+    at callAsyncCircusFn (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusHook (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:281:40)
+    at _runTest (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:246:5)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at run (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:444:34)]]></failure>
+    </testCase>
+    <testCase name="CodeGenerator Edge cases should handle very long input strings" duration="1">
+      <failure message="Error: EPERM: operation not permitted, unlink &apos;G:\projects\mcp-console-automation\data\generated-tests\deep&apos;"><![CDATA[Error: EPERM: operation not permitted, unlink 'G:\projects\mcp-console-automation\data\generated-tests\deep'
+    at Object.unlinkSync (node:fs:1952:11)
+    at G:\projects\mcp-console-automation\src\tests\CodeGenerator.test.ts:31:12
+    at Array.forEach (<anonymous>)
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\CodeGenerator.test.ts:30:13)
+    at Promise.then.completed (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (<anonymous>)
+    at callAsyncCircusFn (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusHook (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:281:40)
+    at _runTest (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:246:5)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at run (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:444:34)]]></failure>
+    </testCase>
+  </file>
+  <file path="G:\projects\mcp-console-automation\src\tests\Matchers.test.ts">
+    <testCase name="Matchers toContain should return true when string contains substring" duration="1"/>
+    <testCase name="Matchers toContain should return false when string does not contain substring" duration="1"/>
+    <testCase name="Matchers toContain should throw error for non-string inputs" duration="17"/>
+    <testCase name="Matchers toMatch should match with regex pattern" duration="1"/>
+    <testCase name="Matchers toMatch should match with string pattern" duration="1"/>
+    <testCase name="Matchers toMatch should return false for non-matching pattern" duration="1"/>
+    <testCase name="Matchers toEqual should compare primitives with === equality" duration="1"/>
+    <testCase name="Matchers toDeepEqual should deeply compare objects" duration="1"/>
+    <testCase name="Matchers toDeepEqual should deeply compare arrays" duration="1"/>
+    <testCase name="Matchers toDeepEqual should handle nested structures" duration="1"/>
+    <testCase name="Matchers toDeepEqual should handle Date objects" duration="1"/>
+    <testCase name="Matchers toDeepEqual should handle RegExp objects" duration="2"/>
+    <testCase name="Matchers toDeepEqual should handle null and undefined" duration="2"/>
+    <testCase name="Matchers toBeGreaterThan should return true when actual &gt; expected" duration="2"/>
+    <testCase name="Matchers toBeGreaterThan should throw error for non-number inputs" duration="2"/>
+    <testCase name="Matchers toBeGreaterThanOrEqual should return true when actual &gt;= expected" duration="1"/>
+    <testCase name="Matchers toBeLessThan should return true when actual &lt; expected" duration="1"/>
+    <testCase name="Matchers toBeLessThanOrEqual should return true when actual &lt;= expected" duration="2"/>
+    <testCase name="Matchers toStartWith should return true when string starts with prefix" duration="0"/>
+    <testCase name="Matchers toStartWith should throw error for non-string inputs" duration="1"/>
+    <testCase name="Matchers toEndWith should return true when string ends with suffix" duration="1"/>
+    <testCase name="Matchers toInclude should return true when array includes item" duration="1"/>
+    <testCase name="Matchers toInclude should handle object comparison" duration="4"/>
+    <testCase name="Matchers toInclude should throw error for non-array input" duration="1"/>
+    <testCase name="Matchers toHaveLength should check array length" duration="0"/>
+    <testCase name="Matchers toHaveLength should check string length" duration="0"/>
+    <testCase name="Matchers toHaveLength should throw error for invalid inputs" duration="2"/>
+    <testCase name="Matchers toBeEmpty should check empty arrays" duration="1"/>
+    <testCase name="Matchers toBeEmpty should check empty strings" duration="1"/>
+    <testCase name="Matchers toBeEmpty should check empty objects" duration="1"/>
+    <testCase name="Matchers toThrow should return true when function throws" duration="1"/>
+    <testCase name="Matchers toThrow should match error message with string" duration="1"/>
+    <testCase name="Matchers toThrow should match error message with regex" duration="0"/>
+    <testCase name="Matchers toContainError should detect default error patterns" duration="2">
+      <failure message="Error: expect(received).toBe(expected) // Object.is equality"><![CDATA[Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: true
+Received: false
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\Matchers.test.ts:235:61)
+    at Promise.then.completed (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (<anonymous>)
+    at callAsyncCircusFn (G:\projects\mcp-console-automation\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusTest (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:316:40)
+    at _runTest (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:252:3)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:121:9)
+    at run (G:\projects\mcp-console-automation\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (G:\projects\mcp-console-automation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (G:\projects\mcp-console-automation\node_modules\jest-runner\build\runTest.js:444:34)]]></failure>
+    </testCase>
+    <testCase name="Matchers toContainError should match custom error pattern string" duration="1"/>
+    <testCase name="Matchers toContainError should match custom error pattern regex" duration="0"/>
+    <testCase name="Matchers toMatchPattern should match with custom function" duration="0"/>
+    <testCase name="Matchers toMatchPattern should throw error for non-function pattern" duration="1"/>
+    <testCase name="Matchers toBeTruthy should check truthy values" duration="1"/>
+    <testCase name="Matchers toBeFalsy should check falsy values" duration="1"/>
+    <testCase name="Matchers toBeNull should check null value" duration="1"/>
+    <testCase name="Matchers toBeUndefined should check undefined value" duration="1"/>
+    <testCase name="Matchers toBeDefined should check defined values" duration="2"/>
+    <testCase name="Matchers toBeType should check value types" duration="4"/>
+    <testCase name="Matchers toBeType should throw error for invalid type" duration="1"/>
+    <testCase name="Matchers toBeInstanceOf should check instanceof" duration="1"/>
+    <testCase name="Matchers toHaveProperty should check object has property" duration="1"/>
+    <testCase name="Matchers toHaveProperty should throw error for non-object" duration="1"/>
+    <testCase name="Matchers toHavePropertyValue should check property value" duration="1"/>
+    <testCase name="Matchers toHavePropertyValue should deeply compare property values" duration="1"/>
+    <testCase name="Matchers toBeCloseTo should check if numbers are close" duration="1"/>
+    <testCase name="Matchers toBeCloseTo should use default delta" duration="0"/>
+    <testCase name="Matchers toContainAll should check array contains all items" duration="1"/>
+    <testCase name="Matchers toContainAll should check string contains all substrings" duration="1"/>
+    <testCase name="Matchers toContainAny should check array contains any item" duration="1"/>
+    <testCase name="Matchers toContainAny should check string contains any substring" duration="2"/>
+    <testCase name="Matchers toMatchJSON should parse and match JSON" duration="1"/>
+    <testCase name="Matchers toMatchJSON should return false for invalid JSON" duration="1"/>
+    <testCase name="Matchers toBeBetween should check if number is between min and max" duration="2"/>
+    <testCase name="Matchers toBeBefore should check if date is before another" duration="2"/>
+    <testCase name="Matchers toBeAfter should check if date is after another" duration="2"/>
+    <testCase name="Matchers toBeSorted should check if array is sorted ascending" duration="1"/>
+    <testCase name="Matchers toBeSorted should check if array is sorted descending" duration="1"/>
+    <testCase name="Matchers toHaveUniqueElements should check if array has unique elements" duration="1"/>
+    <testCase name="Matchers toHaveUniqueElements should handle object uniqueness" duration="1"/>
+  </file>
+  <file path="G:\projects\mcp-console-automation\src\tests\AssertionEngine.test.ts">
+    <testCase name="AssertionEngine output_contains assertions should pass when output contains expected text" duration="2"/>
+    <testCase name="AssertionEngine output_contains assertions should fail when output does not contain expected text" duration="1"/>
+    <testCase name="AssertionEngine output_contains assertions should throw on assert failure" duration="11"/>
+    <testCase name="AssertionEngine output_matches assertions should pass when output matches regex" duration="2"/>
+    <testCase name="AssertionEngine output_matches assertions should work with string regex" duration="1"/>
+    <testCase name="AssertionEngine output_matches assertions should fail when output does not match regex" duration="1"/>
+    <testCase name="AssertionEngine exit_code assertions should pass when exit codes match" duration="2"/>
+    <testCase name="AssertionEngine exit_code assertions should fail when exit codes do not match" duration="2"/>
+    <testCase name="AssertionEngine exit_code assertions should validate types" duration="3"/>
+    <testCase name="AssertionEngine no_errors assertions should pass when output has no errors" duration="1"/>
+    <testCase name="AssertionEngine no_errors assertions should fail when output contains error keywords" duration="1"/>
+    <testCase name="AssertionEngine no_errors assertions should detect various error patterns" duration="1">
+      <failure message="Error: expect(received).toBe(expected) // Object.is equality"><![CDATA[Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: false
+Received: true
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\AssertionEngine.test.ts:172:31)]]></failure>
+    </testCase>
+    <testCase name="AssertionEngine state_equals assertions should pass when states are deeply equal" duration="1"/>
+    <testCase name="AssertionEngine state_equals assertions should fail when states differ" duration="1"/>
+    <testCase name="AssertionEngine state_equals assertions should handle nested objects" duration="1"/>
+    <testCase name="AssertionEngine custom assertions should register and use custom matcher" duration="5"/>
+    <testCase name="AssertionEngine custom assertions should fail with unknown custom matcher" duration="2"/>
+    <testCase name="AssertionEngine custom assertions should require operator for custom assertions" duration="1"/>
+    <testCase name="AssertionEngine evaluateAll should evaluate multiple assertions" duration="1"/>
+    <testCase name="AssertionEngine evaluateAll should continue evaluating after failures" duration="1"/>
+    <testCase name="AssertionEngine assertAll should pass when all assertions pass" duration="1"/>
+    <testCase name="AssertionEngine assertAll should throw on first failure" duration="1"/>
+    <testCase name="AssertionEngine checkAll should return passed status and results" duration="1"/>
+    <testCase name="AssertionEngine checkAll should indicate failure without throwing" duration="1"/>
+    <testCase name="AssertionEngine error messages should provide clear error messages for failures" duration="1"/>
+    <testCase name="AssertionEngine error messages should truncate long output in messages" duration="1"/>
+    <testCase name="AssertionEngine getCustomMatchers should return all registered matchers" duration="1"/>
+  </file>
+  <file path="G:\projects\mcp-console-automation\src\tests\FlakeDetector.test.ts">
+    <testCase name="FlakeDetector Flake Detection should detect flaky test with inconsistent results" duration="4"/>
+    <testCase name="FlakeDetector Flake Detection should mark stable test as not flaky" duration="2"/>
+    <testCase name="FlakeDetector Flake Detection should detect flaky test with occasional failures" duration="2"/>
+    <testCase name="FlakeDetector Failure Patterns should extract failure patterns" duration="2"/>
+    <testCase name="FlakeDetector Batch Flake Detection should detect multiple flaky tests" duration="1"/>
+    <testCase name="FlakeDetector Flake Summary should generate summary for multiple tests" duration="1"/>
+    <testCase name="FlakeDetector Recommendations should generate recommendations for flaky tests" duration="1"/>
+    <testCase name="FlakeDetector Parallel vs Sequential Detection should run detection in parallel when configured" duration="5">
+      <failure message="Error: expect(received).toBeLessThan(expected)"><![CDATA[Error: expect(received).toBeLessThan(expected)
+
+Expected: < 0
+Received:   1
+    at Object.<anonymous> (G:\projects\mcp-console-automation\src\tests\FlakeDetector.test.ts:283:32)]]></failure>
+    </testCase>
+  </file>
+  <file path="G:\projects\mcp-console-automation\src\tests\WorkerPool.test.ts">
+    <testCase name="WorkerPool Initialization should initialize with specified number of workers" duration="24"/>
+    <testCase name="WorkerPool Initialization should default to 4 workers if not specified" duration="25"/>
+    <testCase name="WorkerPool Initialization should throw error if already initialized" duration="43"/>
+    <testCase name="WorkerPool Task Execution should execute a simple task" duration="51"/>
+    <testCase name="WorkerPool Task Execution should execute multiple tasks in parallel" duration="70"/>
+    <testCase name="WorkerPool Task Execution should queue tasks when all workers are busy" duration="57"/>
+    <testCase name="WorkerPool Error Handling should handle task timeout" duration="48"/>
+    <testCase name="WorkerPool Error Handling should reject new tasks when shutting down" duration="15"/>
+    <testCase name="WorkerPool Statistics should track task completion statistics" duration="58"/>
+    <testCase name="WorkerPool Shutdown should gracefully shutdown all workers" duration="44"/>
+    <testCase name="WorkerPool Shutdown should wait for active tasks before shutdown" duration="114"/>
+  </file>
+  <file path="G:\projects\mcp-console-automation\src\tests\TestRecorder.test.ts">
+    <testCase name="TestRecorder startRecording should start a new recording" duration="2"/>
+    <testCase name="TestRecorder startRecording should throw error if recording already in progress" duration="15"/>
+    <testCase name="TestRecorder startRecording should capture environment metadata" duration="2"/>
+    <testCase name="TestRecorder stopRecording should stop recording and save to file" duration="1"/>
+    <testCase name="TestRecorder stopRecording should throw error if no recording in progress" duration="1"/>
+    <testCase name="TestRecorder stopRecording should include duration in saved recording" duration="1"/>
+    <testCase name="TestRecorder recordCreateSession should record a create_session step" duration="2"/>
+    <testCase name="TestRecorder recordCreateSession should set currentSessionId" duration="1"/>
+    <testCase name="TestRecorder recordSendInput should record a send_input step" duration="2"/>
+    <testCase name="TestRecorder recordSendInput should use current session ID if not specified" duration="1"/>
+    <testCase name="TestRecorder recordSendKey should record a send_key step" duration="1"/>
+    <testCase name="TestRecorder recordWaitForOutput should record a wait_for_output step" duration="1"/>
+    <testCase name="TestRecorder getStats should return recording statistics" duration="1"/>
+    <testCase name="TestRecorder getStats should return null if no recording" duration="1"/>
+    <testCase name="TestRecorder cancelRecording should cancel recording without saving" duration="4"/>
+    <testCase name="TestRecorder cancelRecording should throw error if no recording in progress" duration="1"/>
+    <testCase name="TestRecorder Static methods listRecordings should list all recordings in directory" duration="2"/>
+    <testCase name="TestRecorder Static methods listRecordings should return empty array if directory does not exist" duration="2"/>
+    <testCase name="TestRecorder Static methods loadRecording should load a recording from file" duration="8"/>
+    <testCase name="TestRecorder Static methods loadRecording should throw error if recording not found" duration="2"/>
+    <testCase name="TestRecorder Static methods loadRecording should handle .json extension" duration="11"/>
+    <testCase name="TestRecorder Static methods deleteRecording should delete a recording file" duration="4"/>
+    <testCase name="TestRecorder Static methods deleteRecording should not throw if file does not exist" duration="2"/>
+    <testCase name="TestRecorder Timestamp tracking should record relative timestamps for steps" duration="35"/>
+    <testCase name="TestRecorder Edge cases should handle special characters in filenames" duration="2"/>
+    <testCase name="TestRecorder Edge cases should handle empty steps array" duration="2"/>
+    <testCase name="TestRecorder Edge cases should preserve metadata through save/load cycle" duration="19"/>
+  </file>
+  <file path="G:\projects\mcp-console-automation\src\tests\ExecutionMetrics.test.ts">
+    <testCase name="ExecutionMetricsCollector Recording Metrics should record test execution metrics" duration="3"/>
+    <testCase name="ExecutionMetricsCollector Recording Metrics should track session counts" duration="1"/>
+    <testCase name="ExecutionMetricsCollector Metrics Summary should generate summary statistics" duration="2"/>
+    <testCase name="ExecutionMetricsCollector Metrics Summary should handle empty metrics" duration="1"/>
+    <testCase name="ExecutionMetricsCollector Metrics Export should export metrics to JSON" duration="1"/>
+    <testCase name="ExecutionMetricsCollector Clear Metrics should clear all metrics" duration="1"/>
+    <testCase name="PerformanceMonitor should track performance metrics" duration="108"/>
+    <testCase name="MetricsAggregator should aggregate metrics from multiple collectors" duration="2"/>
+  </file>
+  <file path="G:\projects\mcp-console-automation\src\tests\TestDataLoader.test.ts">
+    <testCase name="TestDataLoader JSON fixtures should load JSON fixture" duration="5"/>
+    <testCase name="TestDataLoader JSON fixtures should load servers JSON fixture" duration="2"/>
+    <testCase name="TestDataLoader YAML fixtures should load YAML fixture" duration="5"/>
+    <testCase name="TestDataLoader YAML fixtures should parse YAML structure correctly" duration="2"/>
+    <testCase name="TestDataLoader CSV fixtures should load CSV fixture" duration="2"/>
+    <testCase name="TestDataLoader CSV fixtures should parse CSV with correct types" duration="6"/>
+    <testCase name="TestDataLoader CSV fixtures should parse CSV headers correctly" duration="3"/>
+    <testCase name="TestDataLoader Caching should cache fixtures by default" duration="2"/>
+    <testCase name="TestDataLoader Caching should return cached fixture on second load" duration="2"/>
+    <testCase name="TestDataLoader Caching should skip cache when disabled" duration="3"/>
+    <testCase name="TestDataLoader Caching should clear cache" duration="2"/>
+    <testCase name="TestDataLoader Multiple fixtures should load multiple fixtures" duration="4"/>
+    <testCase name="TestDataLoader Error handling should throw error for non-existent file" duration="12"/>
+    <testCase name="TestDataLoader Error handling should throw error for unsupported format" duration="3"/>
+    <testCase name="TestDataLoader Error handling should throw error for invalid JSON" duration="5"/>
+    <testCase name="TestDataLoader Format detection should detect JSON format from extension" duration="5"/>
+    <testCase name="TestDataLoader Format detection should detect YAML format from extension" duration="2"/>
+    <testCase name="TestDataLoader Format detection should detect CSV format from extension" duration="2"/>
+    <testCase name="TestDataLoader Metadata should store and retrieve metadata" duration="2"/>
+  </file>
+  <file path="G:\projects\mcp-console-automation\src\tests\FixtureManager.test.ts">
+    <testCase name="FixtureManager register should register a fixture" duration="2"/>
+    <testCase name="FixtureManager register should register with options" duration="1"/>
+    <testCase name="FixtureManager registerMany should register multiple fixtures" duration="0"/>
+    <testCase name="FixtureManager load should load a registered fixture" duration="4"/>
+    <testCase name="FixtureManager load should throw error for unregistered fixture" duration="12"/>
+    <testCase name="FixtureManager load should return cached fixture on second load" duration="3"/>
+    <testCase name="FixtureManager loadAll should load all registered fixtures" duration="6"/>
+    <testCase name="FixtureManager loadAll should respect priority order" duration="4"/>
+    <testCase name="FixtureManager loadInOrder should load fixtures in specified order" duration="3"/>
+    <testCase name="FixtureManager get should retrieve loaded fixture" duration="2"/>
+    <testCase name="FixtureManager get should return undefined for unloaded fixture" duration="1"/>
+    <testCase name="FixtureManager unload should unload a fixture" duration="3"/>
+    <testCase name="FixtureManager reload should reload a fixture" duration="2"/>
+    <testCase name="FixtureManager dependencies should validate dependencies" duration="1"/>
+    <testCase name="FixtureManager dependencies should detect missing dependencies" duration="1"/>
+    <testCase name="FixtureManager dependencies should get dependency graph" duration="1"/>
+    <testCase name="FixtureManager dependencies should detect circular dependencies" duration="1"/>
+    <testCase name="FixtureManager createSeedData should create seed data from loaded fixtures" duration="2"/>
+    <testCase name="FixtureManager getStats should return statistics" duration="5"/>
+  </file>
+  <file path="G:\projects\mcp-console-automation\src\tests\TestEnvironment.test.ts">
+    <testCase name="TestEnvironmentManager createEnvironment should create a new environment" duration="2"/>
+    <testCase name="TestEnvironmentManager createEnvironment should initialize environment state" duration="1"/>
+    <testCase name="TestEnvironmentManager setupEnvironment should setup environment" duration="1"/>
+    <testCase name="TestEnvironmentManager setupEnvironment should throw error for non-existent environment" duration="22"/>
+    <testCase name="TestEnvironmentManager teardownEnvironment should teardown environment" duration="1"/>
+    <testCase name="TestEnvironmentManager variables should set and get variables" duration="0"/>
+    <testCase name="TestEnvironmentManager variables should get all variables" duration="1"/>
+    <testCase name="TestEnvironmentManager hooks should register setup hooks" duration="1"/>
+    <testCase name="TestEnvironmentManager hooks should register teardown hooks" duration="2"/>
+    <testCase name="TestEnvironmentManager withEnvironment should create scoped environment" duration="1"/>
+    <testCase name="TestEnvironmentManager withEnvironment should cleanup even on error" duration="2"/>
+    <testCase name="TestEnvironmentManager createIsolatedEnvironment should create isolated copy" duration="1"/>
+    <testCase name="TestEnvironmentManager listEnvironments should list all environments" duration="1"/>
+  </file>
+  <file path="G:\projects\mcp-console-automation\src\tests\SnapshotDiffer.test.ts">
+    <testCase name="SnapshotDiffer compare should detect identical snapshots" duration="2"/>
+    <testCase name="SnapshotDiffer compare should detect added lines" duration="1"/>
+    <testCase name="SnapshotDiffer compare should detect removed lines" duration="1"/>
+    <testCase name="SnapshotDiffer compare should detect state changes" duration="2"/>
+    <testCase name="SnapshotDiffer compareDetailed should provide line-by-line diff" duration="1"/>
+    <testCase name="SnapshotDiffer compareDetailed should detect object state diff" duration="4"/>
+    <testCase name="SnapshotDiffer compareDetailed should handle nested state" duration="1"/>
+    <testCase name="SnapshotDiffer calculateSimilarity should return 1 for identical snapshots" duration="0"/>
+    <testCase name="SnapshotDiffer calculateSimilarity should return 0 for completely different snapshots" duration="1"/>
+    <testCase name="SnapshotDiffer calculateSimilarity should return value between 0 and 1 for partial matches" duration="1"/>
+    <testCase name="SnapshotDiffer formatDiff should format diff as text" duration="1"/>
+    <testCase name="SnapshotDiffer formatDiff should indicate identical snapshots" duration="1"/>
+    <testCase name="SnapshotDiffer formatDiff should show added and removed lines" duration="1"/>
+    <testCase name="SnapshotDiffer formatDiff should show state changes" duration="1"/>
+    <testCase name="SnapshotDiffer getSummary should provide summary statistics" duration="1"/>
+    <testCase name="SnapshotDiffer getSummary should return zero for identical snapshots" duration="1"/>
+    <testCase name="SnapshotDiffer edge cases should handle empty output" duration="1"/>
+    <testCase name="SnapshotDiffer edge cases should handle empty state" duration="0"/>
+    <testCase name="SnapshotDiffer edge cases should handle large output differences" duration="1"/>
+    <testCase name="SnapshotDiffer edge cases should handle complex nested state" duration="1"/>
+  </file>
+  <file path="G:\projects\mcp-console-automation\src\tests\DataParameterizer.test.ts">
+    <testCase name="DataParameterizer runParameterized should run test with all datasets" duration="15"/>
+    <testCase name="DataParameterizer runParameterized should stop on first failure with first-failure strategy" duration="2"/>
+    <testCase name="DataParameterizer runParameterized should sample random datasets with random-sample strategy" duration="2"/>
+    <testCase name="DataParameterizer summarizeResults should calculate summary statistics" duration="1"/>
+    <testCase name="DataParameterizer getFailedDatasets should identify failed datasets" duration="1"/>
+    <testCase name="DataParameterizer getDatasetAt should retrieve dataset by index" duration="1"/>
+    <testCase name="DataParameterizer getDatasetAt should throw error for invalid index" duration="13"/>
+  </file>
+  <file path="G:\projects\mcp-console-automation\tests\ErrorDetector.test.ts">
+    <testCase name="ErrorDetector detect should detect generic error messages" duration="6"/>
+    <testCase name="ErrorDetector detect should detect exceptions" duration="1"/>
+    <testCase name="ErrorDetector detect should detect warnings" duration="1"/>
+    <testCase name="ErrorDetector detect should return line numbers" duration="1"/>
+    <testCase name="ErrorDetector detect should detect multiple error types" duration="5"/>
+    <testCase name="ErrorDetector detect should use custom patterns" duration="1"/>
+    <testCase name="ErrorDetector analyzeStackTrace should detect Python tracebacks" duration="1"/>
+    <testCase name="ErrorDetector analyzeStackTrace should detect Java stack traces" duration="1"/>
+    <testCase name="ErrorDetector analyzeStackTrace should detect Node.js stack traces" duration="1"/>
+    <testCase name="ErrorDetector getSeverityScore should calculate severity scores correctly" duration="1"/>
+    <testCase name="ErrorDetector getSeverityScore should return 0 for empty errors array" duration="1"/>
+    <testCase name="ErrorDetector pattern management should add new patterns" duration="1"/>
+    <testCase name="ErrorDetector pattern management should remove patterns" duration="0"/>
   </file>
 </testExecutions>
