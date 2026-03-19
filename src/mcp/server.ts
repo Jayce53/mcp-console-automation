@@ -93,7 +93,6 @@ export class ConsoleAutomationServer {
 
     this.setupHandlers();
     this.setupCleanup();
-    this.setupStdioProtection();
     this.setupPersistence();
     this.setupErrorIsolation();
   }
@@ -3867,52 +3866,6 @@ export class ConsoleAutomationServer {
       this.logger.error(`Failed to recover session ${sessionId}:`, error);
     }
     return null;
-  }
-
-  private setupStdioProtection() {
-    debugLog('[INIT] Setting up STDIO protection');
-
-    // Save original stdout/stderr write methods
-    const originalStdoutWrite = process.stdout.write.bind(process.stdout);
-    const originalStderrWrite = process.stderr.write.bind(process.stderr);
-
-    // Override stdout.write to filter out non-MCP content
-    process.stdout.write = function (
-      chunk: any,
-      encoding?: any,
-      callback?: any
-    ): boolean {
-      // Convert chunk to string for inspection
-      const str = chunk?.toString ? chunk.toString() : String(chunk);
-
-      // Only allow JSON-RPC messages through stdout
-      // MCP protocol uses JSON-RPC 2.0 format
-      if (
-        str.trim().startsWith('{') &&
-        (str.includes('"jsonrpc":"2.0"') ||
-          str.includes('"method"') ||
-          str.includes('"result"'))
-      ) {
-        return originalStdoutWrite(chunk, encoding, callback);
-      }
-
-      // Redirect non-MCP content to debug log
-      debugLog('[STDOUT-FILTERED]', str);
-      return true;
-    } as any;
-
-    // Keep stderr as-is but log it for debugging
-    process.stderr.write = function (
-      chunk: any,
-      encoding?: any,
-      callback?: any
-    ): boolean {
-      const str = chunk?.toString ? chunk.toString() : String(chunk);
-      debugLog('[STDERR]', str);
-      return originalStderrWrite(chunk, encoding, callback);
-    } as any;
-
-    debugLog('[INIT] STDIO protection enabled');
   }
 
   async start() {
